@@ -3,21 +3,22 @@ import logo from './Raspberry_Pi_Logo.svg';
 import './App.css';
 
 class App extends Component {
-   constructor(){
-       super();
-       this.state ={temperatures: []};
-   }
-   componentDidMount() {
-          fetch('/get/temperature')
-            .then(res => {
-                console.log(res);
-                return res.json()
-             })
-            .then(temperatures => { 
-                console.log(temperatures); 
-                this.setState({ temperatures })
-             });
-         }
+
+  constructor(){
+    super();
+    this.state ={temperatures: []};
+  }
+
+  componentDidMount() {
+    fetch('/get/temperature')
+    .then(res => {
+      return res.json()
+    })
+    .then(temperatures => { 
+      this.setState({ temperatures })
+    });
+  }
+  
   render() {
     return (
       <div className="App">
@@ -26,9 +27,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to Silo Temperature Sensor</h1>
         </header>
         <p className="App-intro">
-            {this.state.temperatures.map(temperature =>
-              <div key={temperature.id}>The last read temperature is: <b>{temperature.temp}</b>°C.</div>
-            )} 
+          {this.state.temperatures.map(temperature =>
+            <div key={temperature.id}>The last read temperature is: <b>{temperature.temp}</b>°C.</div>
+          )} 
         </p>
       </div>
     );
