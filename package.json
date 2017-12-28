@@ -17,6 +17,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage" : "http://github.com/grigoremihaela/pi-temp-react",
+  "homepage": "http://github.com/grigoremihaela/pi-temp-react",
   "proxy": "http://pi-temp-api.herokuapp.com/"
 }
