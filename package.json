@@ -19,10 +19,5 @@
     "eject": "react-scripts eject"
   },
   "homepage": "https://pi-temp-react.herokuapp.com/",
-  "proxy": "https://pi-temp-api.herokuapp.com/",
-  "root": "build/",
-  "clean_urls": false,
-  "routes": {
-    "/**": "index.html"
-  }
+  "proxy": "https://pi-temp-api.herokuapp.com/"
 }
