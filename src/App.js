@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://pi-temp-api.herokuapp.com/get/temperature')
+    fetch('/get/temperature')
     .then(res => {
       return res.json()
     })
