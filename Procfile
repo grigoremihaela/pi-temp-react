@@ -1,1 +1,1 @@
-web: index.html
+web: serve -s build
