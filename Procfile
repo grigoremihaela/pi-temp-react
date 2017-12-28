@@ -1,1 +1,2 @@
-web: bin/boot
+npm run build
+web: serve -s build
