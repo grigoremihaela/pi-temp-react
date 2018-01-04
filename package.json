@@ -18,10 +18,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "cp -a build/. public",
-    "heroku-postbuild": "npm run build && npm run deploy"
+    "heroku-postbuild": "npm run build"
   },
-  "homepage": "https://pi-temp-react.herokuapp.com/",
-  "proxy": "https://pi-temp-api.herokuapp.com/"
+  "homepage": "http://pi-temp-react.herokuapp.com/",
+  "proxy": "http://pi-temp-api.herokuapp.com/"
 }
 
 
