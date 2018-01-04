@@ -20,7 +20,7 @@
     "deploy": "cp -a build/. public",
     "heroku-postbuild": "npm run build"
   },
-  "homepage": "https://github.com/grigoremihaela/pi-temp-react.git",
+  "homepage": "https://pi-temp-react.herokuapp.com/",
   "proxy": "https://pi-temp-api.herokuapp.com/"
 }
 
