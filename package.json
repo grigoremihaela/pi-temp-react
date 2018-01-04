@@ -20,8 +20,8 @@
     "deploy": "cp -a build/. public",
     "heroku-postbuild": "npm run build"
   },
-  "homepage": "http://pi-temp-react.herokuapp.com/",
-  "proxy": "http://pi-temp-api.herokuapp.com/"
+  "homepage": "https://pi-temp-react.herokuapp.com/",
+  "proxy": "https://pi-temp-api.herokuapp.com/"
 }
 
 
