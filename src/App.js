@@ -10,9 +10,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/get/temperature', {
+  fetch('/get/temperature', {
       headers : { 
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json; charset=UTF-8',
         'Accept': 'application/json'
        }
     })
