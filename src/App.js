@@ -10,8 +10,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/get/temperature').then(function(response) { 
+    fetch('https://pi-temp-api.herokuapp.com/get/temperature')
+    .then(function(response) { 
       // Convert to JSON
+      console.log(response);
       return response.json();
     })
     .then(temperatures => { 
@@ -19,7 +21,7 @@ class App extends Component {
       console.log(temperatures);
     });
   }
-  
+
   render() {
     return (
       <div className="App">
@@ -29,10 +31,11 @@ class App extends Component {
           <p>by Miha</p>
         </header>
         <p className="App-intro">
+        {this.state.temperatures.temp41}
              <table className="App-table">
   <tr>
-    <th>Pin Number</th>
-    <th>Sensor Number</th> 
+    <th>Pin</th>
+    <th>Sensor</th> 
     <th>Temperature(°C)</th>
   </tr>
   <tr>
