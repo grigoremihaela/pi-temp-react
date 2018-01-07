@@ -29,7 +29,45 @@ class App extends Component {
         </header>
         <p className="App-intro">
           {this.state.temperatures.map(temperature =>
-            <div key={temperature.id}>The last read temperature is: <b>{temperature.temp}</b>°C.</div>
+            <div key={temperature.id}>
+              <table className="App-table">
+  <tr>
+    <th>Pin Number</th>
+    <th>Sensor Number</th> 
+    <th>Temperature(°C)</th>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>1</td> 
+    <td><b>{temperature.temp41}</b></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>2</td> 
+    <td><b>{temperature.temp42}</b></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>3</td> 
+    <td><b>{temperature.temp43}</b></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4</td> 
+    <td><b>{temperature.temp44}</b></td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>1</td> 
+    <td><b>{temperature.temp17}</b></td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>1</td> 
+    <td><b>{temperature.temp22}</b></td>
+  </tr>
+</table>
+            </div>
           )} 
         </p>
       </div>
