@@ -31,7 +31,6 @@ class App extends Component {
           <p>by Miha</p>
         </header>
         <p className="App-intro">
-        {this.state.temperatures.temp41}
              <table className="App-table">
   <tr>
     <th>Pin</th>
