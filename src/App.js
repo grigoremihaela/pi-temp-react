@@ -6,13 +6,13 @@ class App extends Component {
 
   constructor(){
     super();
-    this.state ={temperatures: []};
+    this.state ={temperatures: {}};
   }
 
   componentDidMount() {
-    fetch('/get/temperature')
-    .then(function(response) {
-      return response.json()
+    fetch('/get/temperature').then(function(response) { 
+      // Convert to JSON
+      return response.json();
     })
     .then(temperatures => { 
       this.setState({ temperatures });
@@ -29,9 +29,7 @@ class App extends Component {
           <p>by Miha</p>
         </header>
         <p className="App-intro">
-          {this.state.temperatures.map(temperature =>
-            <div key={temperature.id}>
-              <table className="App-table">
+             <table className="App-table">
   <tr>
     <th>Pin Number</th>
     <th>Sensor Number</th> 
@@ -40,36 +38,34 @@ class App extends Component {
   <tr>
     <td>4</td>
     <td>1</td> 
-    <td><b>{temperature.temp41}</b></td>
+    <td><b>{this.state.temperatures.temp41}</b></td>
   </tr>
   <tr>
     <td>4</td>
     <td>2</td> 
-    <td><b>{temperature.temp42}</b></td>
+    <td><b>{this.state.temperatures.temp42}</b></td>
   </tr>
   <tr>
     <td>4</td>
     <td>3</td> 
-    <td><b>{temperature.temp43}</b></td>
+    <td><b>{this.state.temperatures.temp43}</b></td>
   </tr>
   <tr>
     <td>4</td>
     <td>4</td> 
-    <td><b>{temperature.temp44}</b></td>
+    <td><b>{this.state.temperatures.temp44}</b></td>
   </tr>
   <tr>
     <td>17</td>
     <td>1</td> 
-    <td><b>{temperature.temp17}</b></td>
+    <td><b>{this.state.temperatures.temp17}</b></td>
   </tr>
   <tr>
     <td>22</td>
     <td>1</td> 
-    <td><b>{temperature.temp22}</b></td>
+    <td><b>{this.state.temperatures.temp22}</b></td>
   </tr>
 </table>
-            </div>
-          )} 
         </p>
       </div>
     );
