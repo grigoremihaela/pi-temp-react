@@ -6,10 +6,23 @@ class App extends Component {
 
   constructor(){
     super();
-    this.state ={temperatures: [{"success":true,"temp41":"20.312","temp42":"20.562","temp43":"20.437","temp44":"20.562","temp17":"21.125","temp22":"20.875"}]};
+    this.state ={temperatures: []};
   }
 
-
+  componentDidMount() {
+    fetch('/get/temperature', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    })
+    .then(res => {
+      return res.json()
+    })
+    .then(temperatures => { 
+      this.setState({ temperatures })
+    });
+  }
   
   render() {
     return (
