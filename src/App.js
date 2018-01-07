@@ -9,15 +9,7 @@ class App extends Component {
     this.state ={temperatures: [{"success":true,"temp41":"20.312","temp42":"20.562","temp43":"20.437","temp44":"20.562","temp17":"21.125","temp22":"20.875"}]};
   }
 
-  componentDidMount() {
-    fetch('/get/temperature')
-    .then(res => {
-      return res.json()
-    })
-    .then(temperatures => { 
-      this.setState({ temperatures })
-    });
-  }
+
   
   render() {
     return (
