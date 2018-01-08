@@ -47,7 +47,7 @@ class App extends Component {
               <td>{nameObj[index].numberSensor}</td> 
               <td>{nameObj[index].temp}</td>
               <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
-              <td>{new Date(nameObj[index].created_at).getHours()} h, {new Date(nameObj[index].created_at).getMinutes()} min</td> 
+              <td>{new Date(nameObj[index].created_at).getHours()}:{new Date(nameObj[index].created_at).getMinutes()}</td> 
             </tr>
             ))}
           </table>
