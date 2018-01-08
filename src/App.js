@@ -39,15 +39,15 @@ class App extends Component {
             <th>Pin</th>
             <th>No.</th> 
             <th>Time</th>
-            <th>Data</th>
+            <th>Date</th>
           </tr>
           {Object.keys(nameObj).map((index) => (
             <tr>
               <td>{nameObj[index].temp}</td>
               <td>{nameObj[index].pin}</td>
               <td>{nameObj[index].numberSensor}</td> 
-              <td>{new Date(nameObj[index].created_at).getHours()}:{new Date(nameObj[index].created_at).getMinutes()}</td> 
-              <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
+              <td>{new Date(nameObj[index].created_at).toLocaleTimeString()}</td> 
+              <td>{new Date(nameObj[index].created_at).toLocaleDateString ()}</td> 
             </tr>
             ))}
           </table>
