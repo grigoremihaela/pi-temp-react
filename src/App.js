@@ -36,7 +36,7 @@ class App extends Component {
         <table className="App-table">
           <tr>
             <th>Pin</th>
-            <th>Sensor</th> 
+            <th>No.</th> 
             <th>Temp.(°C)</th>
             <th>Data</th>
             <th>Time</th>
