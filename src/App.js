@@ -29,23 +29,21 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Silo Temperature Sensor</h1>
+          <h1 className="App-title">Silo Temperature</h1>
           <p>by Miha</p>
         </header>
         <p className="App-intro">
         <table className="App-table">
           <tr>
             <th>Temp.(°C)</th>
-            <th>Pin</th>
-            <th>No.</th> 
+            <th>Pin</th> 
             <th>Time</th>
             <th>Date</th>
           </tr>
           {Object.keys(nameObj).map((index) => (
             <tr>
               <td>{nameObj[index].temp}</td>
-              <td>{nameObj[index].pin}</td>
-              <td>{nameObj[index].numberSensor}</td> 
+              <td>{nameObj[index].pin}/{nameObj[index].numberSensor}</td> 
               <td>{new Date(nameObj[index].created_at).toLocaleTimeString()}</td> 
               <td>{new Date(nameObj[index].created_at).toLocaleDateString ()}</td> 
             </tr>
