@@ -28,6 +28,10 @@
   border: 3px solid green;
   padding: 10px;
 }
+th, td {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
