@@ -45,7 +45,7 @@ class App extends Component {
               <td>{nameObj[index].pin}</td>
               <td>{nameObj[index].numberSensor}</td> 
               <td>{nameObj[index].temp}</td>
-              <td>{nameObj[index].created_at}</td> 
+              <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
             </tr>
             ))}
           </table>
