@@ -23,6 +23,8 @@ class App extends Component {
   }
 
   render() {
+    var nameObj = Object.assign({}, this.state.temperatures);
+
     return (
       <div className="App">
         <header className="App-header">
@@ -31,43 +33,22 @@ class App extends Component {
           <p>by Miha</p>
         </header>
         <p className="App-intro">
-             <table className="App-table">
-  <tr>
-    <th>Pin</th>
-    <th>Sensor</th> 
-    <th>Temperature(°C)</th>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>1</td> 
-    <td><b>{this.state.temperatures.temp41}</b></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>2</td> 
-    <td><b>{this.state.temperatures.temp42}</b></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>3</td> 
-    <td><b>{this.state.temperatures.temp43}</b></td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>4</td> 
-    <td><b>{this.state.temperatures.temp44}</b></td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>1</td> 
-    <td><b>{this.state.temperatures.temp17}</b></td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>1</td> 
-    <td><b>{this.state.temperatures.temp22}</b></td>
-  </tr>
-</table>
+        <table className="App-table">
+          <tr>
+            <th>Pin</th>
+            <th>Sensor</th> 
+            <th>Temp.(°C)</th>
+            <th>Time</th>
+          </tr>
+          {Object.keys(nameObj).map((index) => (
+            <tr>
+              <td>{nameObj[index].pin}</td>
+              <td>{nameObj[index].numberSensor}</td> 
+              <td>{nameObj[index].temp}</td>
+              <td>{nameObj[index].created_at}</td> 
+            </tr>
+            ))}
+          </table>
         </p>
       </div>
     );
