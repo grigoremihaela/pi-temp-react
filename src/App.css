@@ -24,7 +24,7 @@
 
 .App-table {
   margin: auto;
-  width: 90%;
+  width: 50%;
   border: 3px solid green;
 }
 th, td {
