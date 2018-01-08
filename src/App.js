@@ -35,19 +35,19 @@ class App extends Component {
         <p className="App-intro">
         <table className="App-table">
           <tr>
+            <th>Temp.(°C)</th>
             <th>Pin</th>
             <th>No.</th> 
-            <th>Temp.(°C)</th>
-            <th>Data</th>
             <th>Time</th>
+            <th>Data</th>
           </tr>
           {Object.keys(nameObj).map((index) => (
             <tr>
+              <td>{nameObj[index].temp}</td>
               <td>{nameObj[index].pin}</td>
               <td>{nameObj[index].numberSensor}</td> 
-              <td>{nameObj[index].temp}</td>
-              <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
               <td>{new Date(nameObj[index].created_at).getHours()}:{new Date(nameObj[index].created_at).getMinutes()}</td> 
+              <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
             </tr>
             ))}
           </table>
