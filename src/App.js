@@ -38,7 +38,8 @@ class App extends Component {
             <th>Pin</th>
             <th>Sensor</th> 
             <th>Temp.(°C)</th>
-            <th>Time</th>
+            <th>Data</th>
+            <th>Hour</th>
           </tr>
           {Object.keys(nameObj).map((index) => (
             <tr>
@@ -46,6 +47,7 @@ class App extends Component {
               <td>{nameObj[index].numberSensor}</td> 
               <td>{nameObj[index].temp}</td>
               <td>{new Date(nameObj[index].created_at).toLocaleDateString()}</td> 
+              <td>{new Date(nameObj[index].created_at).getHours()}:{new Date(nameObj[index].created_at).getMinutes()}</td> 
             </tr>
             ))}
           </table>
